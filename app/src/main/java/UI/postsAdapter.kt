@@ -1,4 +1,4 @@
-package com.example.postapp.ui
+package com.example.postsapps.ui
 
 import android.view.LayoutInflater
 import android.view.View
