@@ -1,35 +1,14 @@
-package com.example.postsapps.ui
+package com.example.postsapp.ui
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
-import com.example.postsapps.R
-import com.example.postsapps.model.Post
-import com.example.postsapps.ui.Post
-import kotlinx.android.synthetic.main.item_posts.view.*
-
-private val View.ids: Any
-    get() {
-        TODO("Not yet implemented")
-    }
-private val View.body: Any
-    get() {
-        TODO("Not yet implemented")
-    }
-private val View.title: Any
-    get() {
-        TODO("Not yet implemented")
-    }
-private var Any.text: Any
-    get() {
-        TODO("Not yet implemented")
-    }
-    set() {}
-private val View.userId: Any
-    get() {
-        TODO("Not yet implemented")
-    }
+import com.example.postsapp.R
+import com.example.postsapp.models.Post
+import kotlinx.android.synthetic.main.row_item_posts.view.*
 
 class PostsAdapter(
     var posts: List<Post>
@@ -37,7 +16,7 @@ class PostsAdapter(
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = PostsViewHolder(
-        LayoutInflater.from(parent.context).inflate(R.layout.item_posts, parent, false)
+        LayoutInflater.from(parent.context).inflate(R.layout.row_item_posts, parent, false)
     )
 
     override fun getItemCount() = posts.size
@@ -49,6 +28,12 @@ class PostsAdapter(
         holder.itemView.ids.text = post.id.toString()
         holder.itemView.title.text = post.title
         holder.itemView.body.text = post.body
+        holder.itemView.btnpost.setOnClickListener {
+
+
+
+        }
+
     }
 
     inner class PostsViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)

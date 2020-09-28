@@ -9,12 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="UI.commentsAdapter"></activity>
-        <activity android:name="UI.commentsActivity" />
-        <activity android:name="UI.commentActivity" />
+        <activity android:name="postsapp.API.UI.commentsAdapter"></activity>
+        <activity android:name="postsapp.API.UI.commentsActivity" />
+        <activity android:name="postsapp.API.UI.commentActivity" />
         <activity android:name=".activities" />
         <activity android:name=".Hello" />
-        <activity android:name="UI.MainActivity">
+        <activity android:name="postsapp.API.UI.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
